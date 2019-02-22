@@ -1,0 +1,18 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: order-service
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://center1:8081/eureka/,http://center2:8082/eureka/
+security:
+  basic:
+    enabled: false
+  oauth2:
+    resource:
+      tokenInfoUri: http://localhost:8080/auth-service/oauth/check_token
+    client:
+      clientId: client_2
+      clientSecret: 123456  
